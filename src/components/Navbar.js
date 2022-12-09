@@ -6,7 +6,7 @@ const Navbar = () => {
     {
       id: 1,
       path: '/',
-      text: 'Home',
+      text: 'Books',
     },
     {
       id: 2,
