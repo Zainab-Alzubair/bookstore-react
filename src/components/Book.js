@@ -12,16 +12,16 @@ const Book = ({
       <div className="book">
         <h2>
           {' '}
-          title:
+          Title:
           {title}
         </h2>
         <p>
           {' '}
-          author:
+          Author:
           {author}
         </p>
         <h4>
-          category:
+          Category:
           {category}
         </h4>
         <div>
