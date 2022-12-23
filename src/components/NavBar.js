@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Navbar = () => {
+const NavBar = () => {
   const links = [
     {
       id: 1,
@@ -29,4 +29,4 @@ const Navbar = () => {
     </nav>
   );
 };
-export default Navbar;
+export default NavBar;
