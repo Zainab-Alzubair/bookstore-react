@@ -1,27 +1,33 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/books';
 
-class Book extends React.Component {
-  constructor(props) {
-    super();
-    this.props = props;
-  }
+const Book = (props) => {
+  const {
+    title, author, id, type,
+  } = props;
+  const dispatch = useDispatch();
+  const removeBookHandler = (id) => {
+    dispatch(removeBook(id));
+  };
+  return (
+    <div className="book">
+      <p>{type}</p>
+      <h3>{title}</h3>
+      <p>{author}</p>
+      <button type="button" onClick={() => removeBookHandler(id)}>
+        Remove Book
+      </button>
+    </div>
+  );
+};
 
-  render() {
-    const { id, title, author } = this.props;
-    return (
-      <div className="book">
-        <h3>{id}</h3>
-        <h2>{title}</h2>
-        <h3>{author}</h3>
-        <button className="remove-btn" type="button">Remove</button>
-      </div>
-    );
-  }
-}
 Book.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.string,
-  author: PropTypes.string,
-}.isRequired;
+  author: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  type: PropTypes.string.isRequired,
+};
+
 export default Book;
