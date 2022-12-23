@@ -1,33 +1,47 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/books';
 
-const Book = (props) => {
-  const {
-    title, author, id, type,
-  } = props;
+const Book = ({
+  title, author, id, category,
+}) => {
   const dispatch = useDispatch();
-  const removeBookHandler = (id) => {
-    dispatch(removeBook(id));
-  };
+
   return (
-    <div className="book">
-      <p>{type}</p>
-      <h3>{title}</h3>
-      <p>{author}</p>
-      <button type="button" onClick={() => removeBookHandler(id)}>
-        Remove Book
-      </button>
+    <div>
+      <div className="book">
+        <h2>
+          {' '}
+          Title:
+          {title}
+        </h2>
+        <p>
+          {' '}
+          Author:
+          {author}
+        </p>
+        <h4>
+          Category:
+          {category}
+        </h4>
+        <div>
+          <button
+            type="button"
+            onClick={() => dispatch(removeBook(id))}
+          >
+            Delete
+          </button>
+          <button type="button">
+            Comments
+          </button>
+          <button type="button">
+            Edit
+          </button>
+        </div>
+      </div>
+
     </div>
   );
-};
-
-Book.propTypes = {
-  author: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
-  type: PropTypes.string.isRequired,
 };
 
 export default Book;
