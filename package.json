@@ -1,6 +1,7 @@
 {
   "name": "bookstore-react",
   "version": "0.1.0",
+  "homepage": "https://zainab-alzubair.github.io/bookstore-react/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
