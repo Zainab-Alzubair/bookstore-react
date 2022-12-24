@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { CgProfile } from 'react-icons/cg';
 
 const NavBar = () => {
   const links = [
@@ -15,17 +16,23 @@ const NavBar = () => {
     },
   ];
   return (
-    <nav className="navBar">
-      <ul className="navList">
-        {links.map((link) => (
-          <li key={link.id}>
-            <NavLink to={link.path} className="navItem" exact>
-              {link.text}
-              {' '}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+    <nav className="nav-bar">
+      <div className="left-bar">
+        <h2>Book Store</h2>
+        <ul className="navList">
+          {links.map((link) => (
+            <li key={link.id}>
+              <NavLink to={link.path} className="navItem" exact>
+                {link.text}
+                {' '}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="profile-icom">
+        <CgProfile />
+      </div>
     </nav>
   );
 };

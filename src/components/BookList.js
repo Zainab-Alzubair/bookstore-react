@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { HiOutlineBookOpen } from 'react-icons/hi';
 import AddBook from './AddBook';
 import Book from './Book';
 import { loadBooks } from '../redux/books/books';
@@ -13,7 +14,19 @@ const BookList = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="book-list">
+      <div className="header-wrap">
+        <div className="header">
+          <h1 className="headline">
+            <HiOutlineBookOpen />
+            {' '}
+            Books Library
+            {' '}
+            <HiOutlineBookOpen />
+            {' '}
+          </h1>
+        </div>
+      </div>
       {Object.keys(books).map((id) => (
         <Book
           key={id}

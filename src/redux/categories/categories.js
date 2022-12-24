@@ -1,3 +1,5 @@
+import { IoIosConstruct } from 'react-icons/io';
+
 const STATUS_CHECKER = 'booklist/books/STATUS_CHECKER';
 
 const categories = [];
@@ -5,7 +7,15 @@ const categories = [];
 const categoriesReducer = (state = categories, action) => {
   switch (action.type) {
     case STATUS_CHECKER:
-      return 'Under construction';
+      return (
+        <h3>
+          <IoIosConstruct />
+          {' '}
+          Under construction
+          {' '}
+          <IoIosConstruct />
+        </h3>
+      );
     default:
       return state;
   }

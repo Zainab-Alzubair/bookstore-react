@@ -49,7 +49,7 @@ const AddBook = () => {
           onChange={(e) => inputValue(e)}
           required
         />
-        <button type="submit">Add Book</button>
+        <button className="submit-btn" type="submit">Add Book</button>
       </form>
     </div>
   );
