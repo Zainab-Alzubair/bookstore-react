@@ -19,7 +19,7 @@ const AddBook = () => {
 
   return (
     <div className="formtWrap">
-      <h3>ADD NEW BOOK</h3>
+      <h3 className="form-title">ADD NEW BOOK</h3>
       <form
         className="form"
         onSubmit={(e) => {
@@ -49,7 +49,7 @@ const AddBook = () => {
           onChange={(e) => inputValue(e)}
           required
         />
-        <button type="submit">Add Book</button>
+        <button className="submit-btn" type="submit">Add Book</button>
       </form>
     </div>
   );

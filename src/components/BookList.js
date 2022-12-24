@@ -13,18 +13,24 @@ const BookList = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      {Object.keys(books).map((id) => (
-        <Book
-          key={id}
-          id={id}
-          title={books[id][0].title}
-          author={books[id][0].author}
-          category={books[id][0].category}
-        />
-      ))}
-      <AddBook />
+
+    <div className="books-container">
+      <div className="book-list">
+
+        {Object.keys(books).map((id) => (
+          <Book
+            key={id}
+            id={id}
+            title={books[id][0].title}
+            author={books[id][0].author}
+            category={books[id][0].category}
+          />
+        ))}
+        <div className="horizontal-divider" />
+        <AddBook />
+      </div>
     </div>
+
   );
 };
 

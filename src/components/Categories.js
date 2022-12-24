@@ -7,17 +7,23 @@ const Categories = () => {
   const dispatch = useDispatch();
 
   return (
-    <>
-      <button
-        type="button"
-        onClick={() => {
-          dispatch(statusCheck());
-        }}
-      >
-        Check status
-      </button>
-      <h1>{status}</h1>
-    </>
+    <div className="categ-wrap">
+      <div>
+        <button
+          className="categ-btn"
+          type="button"
+          onClick={() => {
+            dispatch(statusCheck());
+          }}
+        >
+          Check status
+        </button>
+        <h1 className="categ-text">
+          {status}
+          {' '}
+        </h1>
+      </div>
+    </div>
   );
 };
 

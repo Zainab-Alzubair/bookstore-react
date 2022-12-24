@@ -15,17 +15,23 @@ const NavBar = () => {
     },
   ];
   return (
-    <nav className="navBar">
-      <ul className="navList">
-        {links.map((link) => (
-          <li key={link.id}>
-            <NavLink to={link.path} className="navItem" exact>
-              {link.text}
-              {' '}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+    <nav className="nav-bar">
+      <div className="left-bar">
+        <h2 className="nav-brand">Book Store</h2>
+        <ul className="navList">
+          {links.map((link) => (
+            <li key={link.id}>
+              <NavLink to={link.path} className="navItem" exact>
+                {link.text}
+                {' '}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="profile-icom">
+        <button className="icon-button" type="button"><span className="material-icons primary-color">person</span></button>
+      </div>
     </nav>
   );
 };
