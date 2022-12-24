@@ -20,33 +20,37 @@ const Book = ({
             {' '}
             {title}
           </h2>
-          <p>
+          <p className="book-author">
             {' '}
             {author}
           </p>
         </div>
-        <div className="action-btn">
+        <div >
           <button
+           className="action-btn"
             type="button"
             onClick={() => dispatch(removeBook(id))}
           >
             Delete
           </button>
-          <button type="button">
+          <button type="button" className="action-btn">
             Comments
           </button>
-          <button type="button">
+          <button type="button" className="action-btn">
             Edit
           </button>
         </div>
       </div>
       <div className="progress-container">
-        <CircularProgressbar value={percentage} text={`${percentage}%`} />
-        ;
+        <CircularProgressbar value={percentage} />
+        <div class="progress-stat">
+          <p class="percent-complete">64%</p>
+          <p class="completed">Completed</p>
+        </div>
       </div>
       <div className="divider" />
       <div className="chapter-container">
-        <div className="current-chapter">Current Chapter</div>
+        <div className="current-chapter-label">Current Chapter</div>
         <div className="chapter">Chapter 20</div>
         <button type="button" className="update-progress-button">
           Update Progress

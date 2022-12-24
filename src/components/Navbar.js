@@ -18,7 +18,7 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <div className="left-bar">
-        <h2>Book Store</h2>
+        <h2 className='nav-brand'>Book Store</h2>
         <ul className="navList">
           {links.map((link) => (
             <li key={link.id}>
@@ -31,7 +31,7 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="profile-icom">
-        <CgProfile />
+      <button class="icon-button" type="button"><span class="material-icons primary-color">person</span></button>
       </div>
     </nav>
   );
