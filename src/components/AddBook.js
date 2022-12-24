@@ -19,7 +19,7 @@ const AddBook = () => {
 
   return (
     <div className="formtWrap">
-      <h3 className='form-title'>ADD NEW BOOK</h3>
+      <h3 className="form-title">ADD NEW BOOK</h3>
       <form
         className="form"
         onSubmit={(e) => {

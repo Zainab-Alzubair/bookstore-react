@@ -25,9 +25,9 @@ const Book = ({
             {author}
           </p>
         </div>
-        <div >
+        <div>
           <button
-           className="action-btn"
+            className="action-btn"
             type="button"
             onClick={() => dispatch(removeBook(id))}
           >
@@ -43,9 +43,9 @@ const Book = ({
       </div>
       <div className="progress-container">
         <CircularProgressbar value={percentage} />
-        <div class="progress-stat">
-          <p class="percent-complete">64%</p>
-          <p class="completed">Completed</p>
+        <div className="progress-stat">
+          <p className="percent-complete">64%</p>
+          <p className="completed">Completed</p>
         </div>
       </div>
       <div className="divider" />
